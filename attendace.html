@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>Attendane</title>
+    </head>
+    <style>
+        body{
+            background-color: black ;
+        }
+        h2{
+            font-weight: bold;
+            font-family:'Times New Roman';
+            color: rgb(211, 232, 247);
+            font-size: 30px;  
+        }
+        .topp{
+            background-color: rgb(46, 104, 46) ;
+            font-family: Georgia;
+            color:rgb(177, 204, 223);
+            height:40px;
+            font-weight: bold;
+        }
+        th{
+            height: 60px;
+            font-weight: bold;
+            font-family:'Times New Roman';
+            color: rgb(211, 232, 247);
+            font-size: 30px;
+        }
+        td{
+            border: 3px solid rgb(63, 133, 16);
+        }
+        tr{
+            border: 2px solid rgb(63, 133, 16);
+        }
+        .position{
+             margin-top: 80px;
+        }
+        .container{
+            text-align: center;
+        }
+        .fcolumn{
+            width: 400px;
+        }
+        .space{
+            margin-top: 2px;;
+        }
+        .writeup{
+            color:rgb(174, 223, 224);
+            font-family:'Times New Roman';
+        }
+        .class1{
+           color:rgb(23, 85, 23);
+           font-family:'Times New Roman';
+           font-size: 30px;
+           font-weight:inherit;
+           text-decoration: none;
+           list-style-type: none;
+        }
+        #result{
+            margin-top: 20px;
+            width:300px;
+            height:55px;
+            border-radius: 20px;
+            border: 2px solid rgb(23, 95, 23);
+            background-color:transparent ;
+            color:rgb(23, 85, 23);
+           font-family:'Times New Roman';
+           font-size: 30px;
+           font-weight:inherit;
+           text-decoration: none;
+           list-style-type: none;
+        }
+        footer{
+            background-color: rgb(42, 40, 40) ;
+            height: 60px;
+        }
+        footer h4{
+            color:blanchedalmond;
+            font-family: 'Times New Roman';
+            font-size: 15px;
+            text-align: center;
+            top:15px;
+        }
+        footer .social-link .fa
+{
+	width:20px;
+	height:20px;
+	line-height:20px;
+	margin:10px 3px;
+	border:1px solid green;
+}
+.con2{
+    text-align: center;
+}
+    </style>
+    <body>
+        <div class="container ">
+            <h2>Enter Your Details</h2>
+            <input type="button" value="Add" id="add"> 
+            <ul id="sac">
+
+            </ul>
+     <table border="1">
+             <th>ATTENDANCE</th>
+         <tr class="topp">
+            <td class="fcolumn">
+                Subjects
+            </td>
+            <td class="fcolumn">
+            
+                    Present/Absent
+            </td>
+         </tr>
+         <tr>
+             <td class="fcolumn"><p class="writeup">EC201</p>
+            <p><input type="button" value="Join Class" id="add1"></p>
+             <div>
+                 <button id="mac" class="btn btn-primary">Present</button>
+                 <button id="sec" class="btn btn-danger">Delete</button>
+                 <p class="space">
+                  <button id="pac" class="btn btn-primary">Absent</button>
+                  <button id="tac" class="btn btn-danger">Delete</button>
+                 </p>
+             </div>
+             </td>
+         <td class="fcolumn">
+             
+
+             <p id="present" class="position writeup">0</p>
+             <p id="absent" class=" writeup">0</p>
+         </td>
+         </tr>
+         <tr>
+            <td class="fcolumn"><p class="writeup">EC202</p>
+                <p><input type="button" value="Join Class" id="add2"></p>
+            <div>
+                <button id="aac" class="btn btn-primary">Present</button>
+                <button id="bac" class="btn btn-danger">Delete</button>
+                <p class="space">
+                 <button id="cac" class="btn btn-primary">Absent</button>
+                 <button id="dac" class="btn btn-danger">Delete</button>
+                </p>
+            </div>
+            </td>
+        <td class="fcolumn">
+            <p id="present1" class="position writeup">0</p>
+            <p id="absent1" class="writeup">0</p>
+        </td>
+        </tr>
+        <tr>
+            <td class="fcolumn"><p class="writeup">EC203</p>
+                <p><input type="button" value="Join Class" id="add3"></p>
+            <div>
+                <button id="eac" class="btn btn-primary">Present</button>
+                <button id="fac" class="btn btn-danger">Delete</button>
+                <p class="space">
+                 <button id="gac" class="btn btn-primary">Absent</button>
+                 <button id="hac" class="btn btn-danger">Delete</button>
+                </p>
+            </div>
+            </td>
+        <td class="fcolumn">
+            <p id="present2" class="position writeup">0</p>
+            <p id="absent2" class="writeup">0</p>
+        </td>
+        </tr>
+        <tr>
+            <td class="fcolumn"><p class="writeup">EC204</p>
+                <p><input type="button" value="Join Class" id="add4"></p>
+            <div>
+                <button id="iac" class="btn btn-primary">Present</button>
+                <button id="jac" class="btn btn-danger">Delete</button>
+                <p class="space">
+                 <button id="kac" class="btn btn-primary">Absent</button>
+                 <button id="lac" class="btn btn-danger">Delete</button>
+                </p>
+            </div>
+            </td>
+        <td class="fcolumn">
+            <p id="present3" class="position writeup">0</p>
+            <p id="absent3" class="writeup">0</p>
+        </td>
+        </tr>
+        <tr>
+            <td class="fcolumn"><p class="writeup">CS201</p>
+                <p><input type="button" value="Join Class" id="add5"></p>
+            <div>
+                <button id="nac" class="btn btn-primary">Present</button>
+                <button id="oac" class="btn btn-danger">Delete</button>
+                <p class="space">
+                 <button id="qac" class="btn btn-primary">Absent</button>
+                 <button id="rac" class="btn btn-danger">Delete</button>
+                </p>
+            </div>
+            </td>
+        <td class="fcolumn">
+            <p id="present4" class="position writeup">0</p>
+            <p id="absent4" class="writeup">0</p>
+        </td>
+        </tr>
+        <tr>
+            <td class="fcolumn"><p class="writeup">MA201</p>
+                <p><input type="button" value="Join Class" id="add6"></p>
+            <div>
+                <button id="uac" class="btn btn-primary">Present</button>
+                <button id="vac" class="btn btn-danger">Delete</button>
+                <p class="space">
+                 <button id="wac" class="btn btn-primary">Absent</button>
+                 <button id="xac" class="btn btn-danger">Delete</button>
+                </p>
+            </div>
+            </td>
+        <td class="fcolumn">
+            <p id="present5" class="position writeup">0</p>
+            <p id="absent5" class="writeup">0</p>
+        </td>
+        </tr>
+        </table>
+        <button id="result">Calculate Result</button>
+        <h3 class="class1">Present: <span id="pr">0</span></h3>
+        <h3 class="class1">Absent: <span id="ab">0</span></h3>
+        </div>
+        <script>
+               document.getElementById("add").onclick= ()=>{
+                   var li1= document.createElement("li");
+                var li2= document.createElement("li");
+                var li3= document.createElement("li");
+                let var1=prompt("Name");
+                let var2= prompt("Branch");
+                let var3= prompt("Scholar Id");
+                li1.innerText= var1;
+                li2.innerText= var2;
+                li3.innerText= var3;
+                li1.classList.add("class1");
+                li2.classList.add("class1");
+                li3.classList.add("class1");
+                document.getElementById("sac").appendChild(li1);
+                document.getElementById("sac").appendChild(li2);
+                document.getElementById("sac").appendChild(li3);
+                alert("Thank You " + var1 +"! Enjoy working with us!");
+               document.querySelector("h2").remove();
+               document.getElementById("add").remove();
+               }
+            var pres=0;
+            var abs=0;
+            var tpr=0;
+            var tab=0;
+            document.getElementById("add1").onclick= function(){
+                var him= prompt("Enter the Meeting URL");
+                location.replace(him);
+            }
+            document.getElementById("mac").onclick= function(){
+                pres++;
+                tpr++;
+            document.getElementById("sec").onclick= function(){
+                pres--;
+                tpr--;
+                document.getElementById("present").textContent= pres;
+            }
+                document.getElementById("present").textContent= pres;
+        }
+        document.getElementById("pac").onclick= function(){
+                abs++;
+                tab++;
+            document.getElementById("tac").onclick= function(){
+                abs--;
+                tab--;
+                document.getElementById("absent").textContent= abs;
+            }
+                document.getElementById("absent").textContent= abs;
+        }
+        var pres1=0;
+            var abs1=0;
+            document.getElementById("add2").onclick= function(){
+                var him= prompt("Enter the Meeting URL");
+                location.replace(him);
+            }
+            document.getElementById("aac").onclick= function(){
+                pres1++;
+                tpr++;
+            document.getElementById("bac").onclick= function(){
+                pres1--;
+                tpr--;
+                document.getElementById("present1").textContent= pres1;
+            }
+                document.getElementById("present1").textContent= pres1;
+        }
+        document.getElementById("cac").onclick= function(){
+                abs1++;
+                tab++;
+            document.getElementById("dac").onclick= function(){
+                abs1--;
+                tab--;
+                document.getElementById("absent1").textContent= abs1;
+            }
+                document.getElementById("absent1").textContent= abs1;
+        }
+        var pres2=0;
+            var abs2=0;
+            document.getElementById("add3").onclick= function(){
+                var him= prompt("Enter the Meeting URL");
+                location.replace(him);
+            }
+            document.getElementById("eac").onclick= function(){
+                pres2++;
+                tpr++;
+            document.getElementById("fac").onclick= function(){
+                pres2--;
+                tpr--;
+                document.getElementById("present2").textContent= pres2;
+            }
+                document.getElementById("present2").textContent= pres2;
+        }
+        document.getElementById("gac").onclick= function(){
+                abs2++;
+                tab++;
+            document.getElementById("hac").onclick= function(){
+                abs2--;
+                tab--;
+                document.getElementById("absent2").textContent= abs2;
+            }
+                document.getElementById("absent2").textContent= abs2;
+        }
+        var pres3=0;
+            var abs3=0;
+            document.getElementById("add4").onclick= function(){
+                var him= prompt("Enter the Meeting URL");
+                location.replace(him);
+            }
+            document.getElementById("iac").onclick= function(){
+                pres3++;
+                tpr++;
+            document.getElementById("jac").onclick= function(){
+                pres3--;
+                tpr--;
+                document.getElementById("present3").textContent= pres3;
+            }
+                document.getElementById("present3").textContent= pres3;
+        }
+        document.getElementById("kac").onclick= function(){
+                abs3++;
+                tab++;
+            document.getElementById("lac").onclick= function(){
+                abs3--;
+                tab--;
+                document.getElementById("absent3").textContent= abs3;
+            }
+                document.getElementById("absent3").textContent= abs3;
+        }
+        var pres4=0;
+            var abs4=0;
+            document.getElementById("add5").onclick= function(){
+                var him= prompt("Enter the Meeting URL");
+                location.replace(him);
+            }
+            document.getElementById("nac").onclick= function(){
+                pres4++;
+                tpr++;
+            document.getElementById("oac").onclick= function(){
+                pres4--;
+                tpr--;
+                document.getElementById("present4").textContent= pres4;
+            }
+                document.getElementById("present4").textContent= pres4;
+        }
+        document.getElementById("qac").onclick= function(){
+                abs4++;
+                tab++;
+            document.getElementById("rac").onclick= function(){
+                abs4--;
+                tab--;
+                document.getElementById("absent4").textContent= abs4;
+            }
+                document.getElementById("absent4").textContent= abs4;
+        }
+        var pres5=0;
+            var abs5=0;
+            document.getElementById("add6").onclick= function(){
+                var him= prompt("Enter the Meeting URL");
+                location.replace(him);
+            }
+            document.getElementById("uac").onclick= function(){
+                pres5++;
+                tpr++;
+            document.getElementById("vac").onclick= function(){
+                pres5--;
+                tpr--;
+                document.getElementById("present5").textContent= pres5;
+            }
+                document.getElementById("present5").textContent= pres5;
+        }
+        document.getElementById("wac").onclick= function(){
+                abs5++;
+                tab++;
+            document.getElementById("xac").onclick= function(){
+                abs5--;
+                tab--;
+                document.getElementById("absent5").textContent= abs5;
+            }
+                document.getElementById("absent5").textContent= abs5;
+        }
+        
+        document.getElementById("result").onclick=()=>{
+            document.getElementById("pr").textContent= tpr;
+            document.getElementById("ab").textContent= tab;
+            document.getElementById("result").remove();
+        }
+        </script>
+        <footer>
+            <h4>A  DkBindaas  Product</h4>
+            <div class="con2">
+            <div class="social-link">
+                <a href="https://www.facebook.com/himanta.dk" target="_blanc"><i class="fa fa-facebook-official"></a></i>
+                <a href="https://twitter.com/Himanta06649859?s=09" target="_blanc"><i class="fa fa-twitter"></a></i>
+                <a href="https://www.instagram.com/dk_himanta/" target="_blanc"><i class="fa fa-instagram"></a></i>
+            </div>
+            </div>
+        </footer>
+    </body>
+</html>
